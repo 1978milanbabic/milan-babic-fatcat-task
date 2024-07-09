@@ -1,7 +1,10 @@
 import clsx from 'clsx';
 
 import { Card } from '@homework-task/components/Card.tsx';
-import { cards, vscodeProjectLink } from '@homework-task/scenes/Landing/cards.ts';
+import {
+  cards,
+  vscodeProjectLink,
+} from '@homework-task/scenes/Landing/cards.ts';
 
 export const Landing = () => {
   return (
