@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-import { ButtonInterface } from '@app-root/interfaces/ButtonInterface';
+import { ButtonInterface } from '@homework-task/interfaces/ButtonInterface';
 
 export const Button = ({ children, onClick, className }: ButtonInterface) => {
   return (

@@ -1,4 +1,4 @@
-import { HeroInterface } from '@app-root/interfaces/HeroInterface';
+import { HeroInterface } from '@homework-task/interfaces/HeroInterface';
 
 export const Hero = ({ title, image }: HeroInterface) => {
   return (

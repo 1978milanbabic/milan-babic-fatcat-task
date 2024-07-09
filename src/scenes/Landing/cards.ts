@@ -1,4 +1,4 @@
-import { LandingCardInterface } from '@app-root/interfaces/LandingCardInterface.ts';
+import { LandingCardInterface } from '@homework-task/interfaces/LandingCardInterface.ts';
 
 export const vscodeProjectLink = `vscode://file/${__CWD__}`;
 

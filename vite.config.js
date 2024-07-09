@@ -9,7 +9,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@app-root': path.resolve(__dirname, 'src'),
+      '@homework-task': path.resolve(__dirname, 'src'),
     },
   },
 });

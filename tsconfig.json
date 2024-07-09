@@ -5,7 +5,7 @@
     "module": "commonjs",
     "baseUrl": ".",
     "paths": {
-      "@app-root/*": ["src/*"],
+      "@homework-task/*": ["src/*"],
     },
     "allowImportingTsExtensions": true,
     "noEmit": true,

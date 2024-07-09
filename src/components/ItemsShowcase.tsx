@@ -1,4 +1,4 @@
-import { ItemInterface } from '@app-root/interfaces/ItemInterface';
+import { ItemInterface } from '@homework-task/interfaces/ItemInterface';
 
 export const ItemsShowcase = ({ items }: { items: ItemInterface[] }) => {
   return (

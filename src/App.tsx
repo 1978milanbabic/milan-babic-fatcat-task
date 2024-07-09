@@ -1,7 +1,7 @@
 import './styles.css';
 
-import { Layout } from '@app-root/layouts/Layout.tsx';
-import { Landing } from '@app-root/scenes/Landing/Landing.tsx';
+import { Layout } from '@homework-task/layouts/Layout.tsx';
+import { Landing } from '@homework-task/scenes/Landing/Landing.tsx';
 
 const App = () => {
   return (

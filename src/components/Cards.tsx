@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-import { CardInterface } from '@app-root/interfaces/CardInterface.ts';
+import { CardInterface } from '@homework-task/interfaces/CardInterface.ts';
 
 import { Button } from './Button.tsx';
 
