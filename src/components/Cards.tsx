@@ -1,8 +1,10 @@
 import clsx from 'clsx';
 
-import { Button } from './Button.jsx';
+import { CardInterface } from '@app-root/interfaces/CardInterface.ts';
 
-export const Cards = ({ cards }) => {
+import { Button } from './Button.tsx';
+
+export const Cards = ({ cards }: { cards: CardInterface[] }) => {
   return (
     <div className={clsx('flex', 'justify-center', 'items-center')}>
       <div className={clsx('grid', 'grid-cols-2', 'gap-8', 'w-8/12')}>

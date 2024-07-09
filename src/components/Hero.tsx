@@ -1,4 +1,6 @@
-export const Hero = ({ title, image }) => {
+import { HeroInterface } from '@app-root/interfaces/HeroInterface';
+
+export const Hero = ({ title, image }: HeroInterface) => {
   return (
     <div className="flex row justify-center items-center gap-4 h-screen">
       <div className="w-4/12">

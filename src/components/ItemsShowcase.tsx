@@ -1,4 +1,6 @@
-export const ItemsShowcase = ({ items }) => {
+import { ItemInterface } from '@app-root/interfaces/ItemInterface';
+
+export const ItemsShowcase = ({ items }: { items: ItemInterface[] }) => {
   return (
     <div className="flex justify-center items-center">
       <div className="grid grid-cols-2 gap-8 w-8/12">

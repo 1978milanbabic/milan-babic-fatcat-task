@@ -1,6 +1,8 @@
 import clsx from 'clsx';
 
-export const Card = ({ title, text, link }) => (
+import { LandingCardInterface } from '../interfaces/LandingCardInterface';
+
+export const Card = ({ title, text, link }: LandingCardInterface) => (
   <div
     className={clsx(
       'flex',
