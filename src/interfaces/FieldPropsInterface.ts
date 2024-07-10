@@ -1,4 +1,4 @@
-import { InputType } from "@homework-task/types/InputType";
+import { InputType } from '@homework-task/types/InputType';
 
 export interface FieldPropsInterface {
   id: string;

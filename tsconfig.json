@@ -1,8 +1,10 @@
 {
   "compilerOptions": {
     "jsx": "react-jsx",
-    "target": "es2016",
-    "module": "commonjs",
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
       "@homework-task/*": ["src/*"],

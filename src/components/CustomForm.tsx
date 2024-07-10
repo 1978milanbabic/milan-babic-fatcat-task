@@ -1,24 +1,31 @@
-import { useFormContext } from 'react-hook-form';
-import { FieldPropsInterface } from '@homework-task/interfaces/FieldPropsInterface';
 import clsx from 'clsx';
+import { useFormContext } from 'react-hook-form';
 
-const CustomForm = () => {
+import { FieldPropsInterface } from '@homework-task/interfaces/FieldPropsInterface';
+
+export const CustomForm = () => {
   const {
     register,
     formState: { errors },
   } = useFormContext();
 
   const renderField = ({
-    id, 
-    label, 
-    type = 'text', 
+    id,
+    label,
+    type = 'text',
     placeholder = '',
     autoFocus = false,
     margin = 'mb-4',
     fullWidth = false,
-    required = false
+    required = false,
   }: FieldPropsInterface) => (
-    <div className={clsx('mb-4 flex flex-col', fullWidth ? 'w-full' : 'w-8/12', margin ? 'm-auto' : '')}>
+    <div
+      className={clsx(
+        'mb-4 flex flex-col',
+        fullWidth ? 'w-full' : 'w-8/12',
+        margin ? 'm-auto' : ''
+      )}
+    >
       <label htmlFor={id} className="font-semibold text-black">
         {label}
       </label>
@@ -27,7 +34,7 @@ const CustomForm = () => {
           id={id}
           type={type}
           {...register(id)}
-          className='border px-2 py-1 rounded-lg text-gray80'
+          className="border px-2 py-1 rounded-lg text-gray80"
           placeholder={placeholder}
           autoFocus={autoFocus}
           required={required}
@@ -42,9 +49,7 @@ const CustomForm = () => {
           required={required}
         />
       )}
-      {errors[id] && (
-        <p className="text-red">{errors[id].message as string}</p>
-      )}
+      {errors[id] && <p className="text-red">{errors[id].message as string}</p>}
     </div>
   );
 
@@ -54,14 +59,14 @@ const CustomForm = () => {
         id: 'title',
         label: 'Title',
         placeholder: 'Title',
+        fullWidth: true,
       })}
       {renderField({
-        id: 'body', 
+        id: 'body',
         label: 'Body',
         type: 'textarea',
+        fullWidth: true,
       })}
     </>
   );
 };
-
-export default CustomForm;

@@ -1,10 +1,10 @@
-import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
+import { useQuery } from 'react-query';
 
 import { User } from '@homework-task/interfaces/UserInterface';
 
 const fetchUsers = async (): Promise<User[]> => {
-  const url = 'https://jsonplaceholder.typicode.com/users';
+  const url = import.meta.env.VITE_USERS_API_URL;
   const response: { data: User[] } = await axios.get(url);
   return response.data;
 };

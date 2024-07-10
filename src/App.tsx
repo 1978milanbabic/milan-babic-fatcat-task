@@ -1,27 +1,27 @@
-import { z as zValidate } from 'zod';
-import { FormGenerator } from '@homework-task/components/FormGenerator';
-import CustomForm from '@homework-task/components/CustomForm';
-import { UserList } from '@homework-task/components/UserList';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import '@homework-task/styles.css';
 
-const validationSchema = zValidate.object({
-  title: zValidate.string().min(1, 'Title is required').max(50, 'Title must be less than 50 characters'),
-  body: zValidate.string().min(1, 'Body is required').max(200, 'Body must be less than 200 characters'),
-});
-
+import { Navigation } from '@homework-task/components/Navigation';
+import { Form } from '@homework-task/scenes/Form/Form.tsx';
 import { Landing } from '@homework-task/scenes/Landing/Landing.tsx';
+import { List } from '@homework-task/scenes/List/List.tsx';
+// import { Page } from '@homework-task/scenes/Page/Page.tsx';
+import { NotFound } from '@homework-task/scenes/NotFound/NotFound.tsx';
 
 const App = () => {
   return (
-    <main>
-      <Landing />
-      <UserList />
-      <FormGenerator 
-        validationSchema={validationSchema} 
-        successMessage='Form submitted successfully' 
-        renderForm={() => <CustomForm />} 
-      />
-    </main>
+    <Router>
+      <main>
+        <Navigation />
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/list" element={<List />} />
+          <Route path="/form" element={<Form />} />
+          {/* <Route path="/page" element={<Page />} />  */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
+    </Router>
   );
 };
 

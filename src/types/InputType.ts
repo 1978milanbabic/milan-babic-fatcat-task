@@ -1,1 +1,1 @@
-export type InputType = 'text' | 'number' | 'email' | 'password' | 'date' | 'textarea' | string | undefined
+export type InputType = string | undefined;
