@@ -15,6 +15,9 @@
     "noImplicitAny": true,
     "strictNullChecks": true,
     "noImplicitThis": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "types": [
+      "@hookform/resolvers",
+    ]
   },
 }
