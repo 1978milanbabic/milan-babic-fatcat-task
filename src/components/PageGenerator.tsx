@@ -64,5 +64,3 @@ export const PageGenerator = ({ data }: { data: SectionInterface[] }) => {
     }
   }
 };
-
-export default PageGenerator;
