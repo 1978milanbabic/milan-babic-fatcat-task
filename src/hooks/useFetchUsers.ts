@@ -1,16 +1,16 @@
 import axios from 'axios';
 import { useQuery } from 'react-query';
 
-import { User } from '@homework-task/interfaces/UserInterface';
+import { UserInterface } from '@homework-task/interfaces/UserInterface';
 
-const fetchUsers = async (): Promise<User[]> => {
+const fetchUsers = async (): Promise<UserInterface[]> => {
   const url = import.meta.env.VITE_USERS_API_URL;
-  const response: { data: User[] } = await axios.get(url);
+  const response: { data: UserInterface[] } = await axios.get(url);
   return response.data;
 };
 
 export const useUsersQuery = () => {
-  return useQuery<User[], Error>({
+  return useQuery<UserInterface[], Error>({
     queryKey: ['users'],
     queryFn: fetchUsers,
   });
